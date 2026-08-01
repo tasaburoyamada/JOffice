@@ -1,0 +1,15 @@
+name = "JOffice"
+version = "0.1.0"
+keywords = ["office", "lean4", "symbol32", "lbir", "nomos"]
+defaultTargets = ["JOffice"]
+
+[[lean_lib]]
+name = "JOffice"
+
+[[require]]
+name = "Lbir"
+path = "../lbir"
+
+[[require]]
+name = "Nomos"
+path = "../nomos"
