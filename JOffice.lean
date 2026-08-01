@@ -1,4 +1,5 @@
 import JOffice.Symbol32
+import JOffice.UI
 
 namespace JOffice
 

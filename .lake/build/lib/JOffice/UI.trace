@@ -1,0 +1,5 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/build/lib LD_LIBRARY_PATH= /home/tasaburoyamada/.elan/toolchains/leanprover--lean4---v4.11.0/bin/lean ././././JOffice/UI.lean -R ./././. -o ././.lake/build/lib/JOffice/UI.olean -i ././.lake/build/lib/JOffice/UI.ilean -c ././.lake/build/ir/JOffice/UI.c --json",
+   "level": "trace"}],
+ "depHash": "5324147282207368733"}

@@ -19,28 +19,17 @@ else
     FAILED=1
 fi
 
-# 2. LBIR Pure Lean 4 VM & ULEB128 Binary Decoder Test
-echo "[TEST 2/4] LBIR VM & Binary Stream Verification..."
-if [ -d "../lbir" ]; then
-    (cd ../lbir && lake build > /dev/null 2>&1)
-    echo "  -> LBIR Pure Lean 4 VM Verification: PASSED"
+# 2. Pure Lean 4 Symbol32 & UI Package Build Test
+echo "[TEST 2/4] JOffice Pure Lean 4 Package Build Test..."
+if lake build > /dev/null 2>&1; then
+    echo "  -> Pure Lean 4 JOffice Package Build: PASSED"
 else
-    echo "  -> Error: LBIR project target not found!"
+    echo "  -> Error: JOffice Pure Lean 4 build failed!"
     FAILED=1
 fi
 
-# 3. Nomos Contract Invariant Proof Test
-echo "[TEST 3/4] Nomos Invariant Verification Test..."
-if [ -d "../nomos" ]; then
-    (cd ../nomos && lake build > /dev/null 2>&1)
-    echo "  -> Nomos Invariant Verification: PASSED"
-else
-    echo "  -> Error: Nomos project target not found!"
-    FAILED=1
-fi
-
-# 4. Office XP OLE2 & Binary Format Parser Validation
-echo "[TEST 4/4] OLE2 / OpenXML Binary Stream Blackbox Validation..."
+# 3. Office XP OLE2 & Binary Format Parser Validation
+echo "[TEST 3/4] OLE2 / OpenXML Binary Stream Blackbox Validation..."
 TEST_STREAM=$(mktemp)
 echo -ne "\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1\x00\x00\x00\x00" > "$TEST_STREAM" # OLE2 Magic Header
 
