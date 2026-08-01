@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: JOffice
-// Imports: Init JOffice.Symbol32 JOffice.UI JOffice.Binary.OLE2 JOffice.Binary.Excel JOffice.Binary.Word JOffice.Binary.Access
+// Imports: Init JOffice.Symbol32 JOffice.UI JOffice.Binary.OLE2 JOffice.Binary.Excel JOffice.Binary.Word JOffice.Binary.Access JOffice.Binary.PowerPoint
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -38,6 +38,7 @@ lean_object* initialize_JOffice_Binary_OLE2(uint8_t builtin, lean_object*);
 lean_object* initialize_JOffice_Binary_Excel(uint8_t builtin, lean_object*);
 lean_object* initialize_JOffice_Binary_Word(uint8_t builtin, lean_object*);
 lean_object* initialize_JOffice_Binary_Access(uint8_t builtin, lean_object*);
+lean_object* initialize_JOffice_Binary_PowerPoint(uint8_t builtin, lean_object*);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_JOffice(uint8_t builtin, lean_object* w) {
 lean_object * res;
@@ -62,6 +63,9 @@ res = initialize_JOffice_Binary_Word(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_JOffice_Binary_Access(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_JOffice_Binary_PowerPoint(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 l_JOffice_version___closed__1 = _init_l_JOffice_version___closed__1();

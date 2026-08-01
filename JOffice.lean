@@ -4,6 +4,7 @@ import JOffice.Binary.OLE2
 import JOffice.Binary.Excel
 import JOffice.Binary.Word
 import JOffice.Binary.Access
+import JOffice.Binary.PowerPoint
 
 namespace JOffice
 
