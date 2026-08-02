@@ -8,3 +8,8 @@
 [2026-08-02T04:02:16+09:00] USER_REQUEST: Officeの定義の中にPowerPointは入ってる？
 [2026-08-02T10:47:39+09:00] USER_REQUEST: モックや動いてるふりしてる箇所無い？
 [2026-08-02T10:48:12+09:00] USER_REQUEST: 修正して。
+[2026-08-02T10:48:50+09:00] USER_REQUEST: モックや動いてるふりしてる箇所無い？
+[2026-08-02T10:50:25+09:00] USER_REQUEST: https://github.com/tasaburoyamada/JOfficeにPushして。
+[2026-08-02T10:50:47+09:00] USER_REQUEST: 実行して
+[2026-08-02T11:07:08+09:00] USER_REQUEST: 完全互換に後は何が足りないと思う？
+[2026-08-02T11:07:37+09:00] USER_REQUEST: 全部実装して。
