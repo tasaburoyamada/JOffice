@@ -2,4 +2,4 @@
  [{"message":
    ".> LEAN_PATH=././.lake/build/lib LD_LIBRARY_PATH= /home/tasaburoyamada/.elan/toolchains/leanprover--lean4---v4.11.0/bin/lean ././././JOffice/Binary/PowerPoint.lean -R ./././. -o ././.lake/build/lib/JOffice/Binary/PowerPoint.olean -i ././.lake/build/lib/JOffice/Binary/PowerPoint.ilean -c ././.lake/build/ir/JOffice/Binary/PowerPoint.c --json",
    "level": "trace"}],
- "depHash": "10507973948012716806"}
+ "depHash": "10108971163081831811"}

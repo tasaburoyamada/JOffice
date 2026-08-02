@@ -19,7 +19,7 @@ structure DirectoryEntry where
   streamSize : UInt64
   deriving Inhabited
 
-/-- Pure Lean 4 OLE2 ヘッダ解釈関数 -/
+/-- Pure Lean 4 OLE2 ヘッダ解釈関数 (全フィールド完全パース実装) -/
 def parseHeader (bytes : ByteArray) : Option Header :=
   if bytes.size < 512 then none
   else
@@ -37,14 +37,28 @@ def parseHeader (bytes : ByteArray) : Option Header :=
     else
       let sShift := bytes[30]!.toUInt16 ||| (bytes[31]!.toUInt16 <<< 8)
       let msShift := bytes[32]!.toUInt16 ||| (bytes[33]!.toUInt16 <<< 8)
+      
+      -- fatSectorCount: Offset 44 (4 bytes)
+      let fatCnt := bytes[44]!.toUInt32 ||| (bytes[45]!.toUInt32 <<< 8) |||
+                    (bytes[46]!.toUInt32 <<< 16) ||| (bytes[47]!.toUInt32 <<< 24)
+      -- directoryFirstSector: Offset 48 (4 bytes)
+      let dirFirst := bytes[48]!.toUInt32 ||| (bytes[49]!.toUInt32 <<< 8) |||
+                      (bytes[50]!.toUInt32 <<< 16) ||| (bytes[51]!.toUInt32 <<< 24)
+      -- miniFatFirstSector: Offset 60 (4 bytes)
+      let miniFatFirst := bytes[60]!.toUInt32 ||| (bytes[61]!.toUInt32 <<< 8) |||
+                          (bytes[62]!.toUInt32 <<< 16) ||| (bytes[63]!.toUInt32 <<< 24)
+      -- miniFatSectorCount: Offset 64 (4 bytes)
+      let miniFatCnt := bytes[64]!.toUInt32 ||| (bytes[65]!.toUInt32 <<< 8) |||
+                        (bytes[66]!.toUInt32 <<< 16) ||| (bytes[67]!.toUInt32 <<< 24)
+                        
       some {
         magic := magicVal,
         sectorShift := sShift,
         miniSectorShift := msShift,
-        fatSectorCount := 0,
-        directoryFirstSector := 0,
-        miniFatFirstSector := 0,
-        miniFatSectorCount := 0
+        fatSectorCount := fatCnt,
+        directoryFirstSector := dirFirst,
+        miniFatFirstSector := miniFatFirst,
+        miniFatSectorCount := miniFatCnt
       }
 
 end JOffice.Binary.OLE2
