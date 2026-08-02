@@ -1,0 +1,5 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/build/lib LD_LIBRARY_PATH= /home/tasaburoyamada/.elan/toolchains/leanprover--lean4---v4.11.0/bin/lean ././././JOffice/UI/NativeBridge.lean -R ./././. -o ././.lake/build/lib/JOffice/UI/NativeBridge.olean -i ././.lake/build/lib/JOffice/UI/NativeBridge.ilean -c ././.lake/build/ir/JOffice/UI/NativeBridge.c --json",
+   "level": "trace"}],
+ "depHash": "1666150502507368511"}

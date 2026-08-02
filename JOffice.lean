@@ -8,6 +8,8 @@ import JOffice.Binary.PowerPoint
 import JOffice.Binary.OLE2Writer
 import JOffice.Binary.ExcelCompiler
 import JOffice.Binary.WordLayout
+import JOffice.UI.Events
+import JOffice.UI.NativeBridge
 
 namespace JOffice
 
