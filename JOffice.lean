@@ -10,6 +10,8 @@ import JOffice.Binary.ExcelCompiler
 import JOffice.Binary.WordLayout
 import JOffice.UI.Events
 import JOffice.UI.NativeBridge
+import JOffice.Binary.OLE2Tree
+import JOffice.Binary.Escher
 
 namespace JOffice
 

@@ -1,1 +1,1 @@
-{"version":3,"references":{"{\"c\":{\"n\":\"String\",\"m\":\"Init.Prelude\"}}":{"usages":[[15,14,15,20,"JOffice.version",15,0,15,31,15,4,15,11]],"definition":null},"{\"c\":{\"n\":\"JOffice.version\",\"m\":\"JOffice\"}}":{"usages":[],"definition":[15,4,15,11]}},"module":"JOffice"}
+{"version":3,"references":{"{\"c\":{\"n\":\"String\",\"m\":\"Init.Prelude\"}}":{"usages":[[17,14,17,20,"JOffice.version",17,0,17,31,17,4,17,11]],"definition":null},"{\"c\":{\"n\":\"JOffice.version\",\"m\":\"JOffice\"}}":{"usages":[],"definition":[17,4,17,11]}},"module":"JOffice"}

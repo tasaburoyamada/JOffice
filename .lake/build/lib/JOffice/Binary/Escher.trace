@@ -1,0 +1,5 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/build/lib LD_LIBRARY_PATH= /home/tasaburoyamada/.elan/toolchains/leanprover--lean4---v4.11.0/bin/lean ././././JOffice/Binary/Escher.lean -R ./././. -o ././.lake/build/lib/JOffice/Binary/Escher.olean -i ././.lake/build/lib/JOffice/Binary/Escher.ilean -c ././.lake/build/ir/JOffice/Binary/Escher.c --json",
+   "level": "trace"}],
+ "depHash": "3517883072795690764"}
