@@ -12,6 +12,8 @@ import JOffice.UI.Events
 import JOffice.UI.NativeBridge
 import JOffice.Binary.OLE2Tree
 import JOffice.Binary.Escher
+import JOffice.UI.Icons
+import JOffice.UI.Dialogs
 
 namespace JOffice
 

@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: JOffice
-// Imports: Init JOffice.Symbol32 JOffice.UI JOffice.Binary.OLE2 JOffice.Binary.Excel JOffice.Binary.Word JOffice.Binary.Access JOffice.Binary.PowerPoint JOffice.Binary.OLE2Writer JOffice.Binary.ExcelCompiler JOffice.Binary.WordLayout JOffice.UI.Events JOffice.UI.NativeBridge JOffice.Binary.OLE2Tree JOffice.Binary.Escher
+// Imports: Init JOffice.Symbol32 JOffice.UI JOffice.Binary.OLE2 JOffice.Binary.Excel JOffice.Binary.Word JOffice.Binary.Access JOffice.Binary.PowerPoint JOffice.Binary.OLE2Writer JOffice.Binary.ExcelCompiler JOffice.Binary.WordLayout JOffice.UI.Events JOffice.UI.NativeBridge JOffice.Binary.OLE2Tree JOffice.Binary.Escher JOffice.UI.Icons JOffice.UI.Dialogs
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -46,6 +46,8 @@ lean_object* initialize_JOffice_UI_Events(uint8_t builtin, lean_object*);
 lean_object* initialize_JOffice_UI_NativeBridge(uint8_t builtin, lean_object*);
 lean_object* initialize_JOffice_Binary_OLE2Tree(uint8_t builtin, lean_object*);
 lean_object* initialize_JOffice_Binary_Escher(uint8_t builtin, lean_object*);
+lean_object* initialize_JOffice_UI_Icons(uint8_t builtin, lean_object*);
+lean_object* initialize_JOffice_UI_Dialogs(uint8_t builtin, lean_object*);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_JOffice(uint8_t builtin, lean_object* w) {
 lean_object * res;
@@ -94,6 +96,12 @@ res = initialize_JOffice_Binary_OLE2Tree(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_JOffice_Binary_Escher(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_JOffice_UI_Icons(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_JOffice_UI_Dialogs(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 l_JOffice_version___closed__1 = _init_l_JOffice_version___closed__1();
